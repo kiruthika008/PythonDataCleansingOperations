@@ -58,3 +58,22 @@ print(result)
 
 result = all(map(lambda x: x < 6, mylist))
 print(result)
+
+#using map with dictionaries
+
+d={'a':1,'b':2}
+result=dict(map(lambda item: (item[0], str(item[1])),d.items()))
+print(result)
+
+
+#using filter with dict
+result=dict(filter(lambda item: item[1]>10 ,d.items()))
+print(result)
+
+#dict sorted sort by value
+result=dict(sorted(d.items(),key=lambda item: item[1])))
+print(result)
+
+#sum of dict values
+total=reduce(lambda acc, item: acc + item[1], d.items(), 0)
+print(result)
